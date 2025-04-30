@@ -1,5 +1,6 @@
 import products.*;
-import  inventory.*;
+import inventory.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -37,7 +38,7 @@ public class Main {
         System.out.println("\n----------Searching for product with ID '2001':");
         System.out.println(notebookInventory.findItemsById(2001));
 
-        System.out.println("\n----------Searching for product with ID '9999':");
+        System.out.println("\n----------Searching for product with ID '2222':");
         System.out.println(bookInventory.findItemsById(2222));
 
         bookInventory.applyDiscount("Book2", 10);
@@ -54,12 +55,12 @@ public class Main {
 
     }
 
-    public static double calculateTotalPrice (Inventory <? extends Product> inventory){
+    public static double calculateTotalPrice(Inventory<? extends Product> inventory) {
 
         double total = 0;
 
         for (Product product : inventory.getItems()) {
-                total += product.getPrice();
+            total += product.getPrice();
 
         }
 

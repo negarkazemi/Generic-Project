@@ -52,8 +52,11 @@ public class Book extends Product {
             formattedId = "100" + idCounter;
         } else if (idCounter < 100) {
             formattedId = "10" + idCounter;
-        } else {
+        } else if (idCounter < 1000) {
             formattedId = "1" + idCounter;
+        } else {
+            System.out.println("ID limit reached");
+            return null;
         }
         idCounter++;
         return formattedId;
